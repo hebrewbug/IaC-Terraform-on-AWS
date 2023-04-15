@@ -1,0 +1,124 @@
+[1mProject:[0m .
+
+ [4mName[0m                                                                                     [4mMonthly Qty[0m  [4mUnit[0m                        [4mMonthly Cost[0m 
+                                                                                                                                                
+ [1maws_autoscaling_group.application_asg[0m                                                                                                          
+ [2m└─[0m aws_launch_template.my_launch_template                                                                                                      
+ [2m   ├─[0m Instance usage (Linux/UNIX, on-demand, t2.micro)                                         2,920  hours                             $36.79 
+ [2m   ├─[0m EC2 detailed monitoring                                                                     28  metrics                            $8.40 
+ [2m   └─[0m block_device_mapping[0]                                                                                                                  
+ [2m      └─[0m Storage (general purpose SSD, gp2)                                                       80  GB                                 $8.80 
+                                                                                                                                                
+ [1maws_cloudwatch_log_group.cis_log_group[0m                                                                                                         
+ [2m├─[0m Data ingested                                                                 Monthly cost depends on usage: $0.57 per GB                   
+ [2m├─[0m Archival Storage                                                              Monthly cost depends on usage: $0.03 per GB                   
+ [2m└─[0m Insights queries data scanned                                                 Monthly cost depends on usage: $0.0057 per GB                 
+                                                                                                                                                
+ [1maws_cloudwatch_metric_alarm.alb_4xx_errors[0m                                                                                                     
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1maws_cloudwatch_metric_alarm.application_asg_cwa_cpu[0m                                                                                            
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1maws_cloudwatch_metric_alarm.application_asg_cwa_memory[0m                                                                                         
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1maws_route53_record.apps_dns[0m                                                                                                                    
+ [2m├─[0m Standard queries (first 1B)                                                   Monthly cost depends on usage: $0.40 per 1M queries           
+ [2m├─[0m Latency based routing queries (first 1B)                                      Monthly cost depends on usage: $0.60 per 1M queries           
+ [2m└─[0m Geo DNS queries (first 1B)                                                    Monthly cost depends on usage: $0.70 per 1M queries           
+                                                                                                                                                
+ [1maws_route53_record.rds_dns[0m                                                                                                                     
+ [2m├─[0m Standard queries (first 1B)                                                   Monthly cost depends on usage: $0.40 per 1M queries           
+ [2m├─[0m Latency based routing queries (first 1B)                                      Monthly cost depends on usage: $0.60 per 1M queries           
+ [2m└─[0m Geo DNS queries (first 1B)                                                    Monthly cost depends on usage: $0.70 per 1M queries           
+                                                                                                                                                
+ [1maws_sns_topic.myasg_sns_topic[0m                                                                                                                  
+ [2m├─[0m API requests (over 1M)                                                        Monthly cost depends on usage: $0.50 per 1M requests          
+ [2m├─[0m HTTP/HTTPS notifications (over 100k)                                          Monthly cost depends on usage: $0.06 per 100k notifications   
+ [2m├─[0m Email/Email-JSON notifications (over 1k)                                      Monthly cost depends on usage: $2.00 per 100k notifications   
+ [2m├─[0m Kinesis Firehose notifications                                                Monthly cost depends on usage: $0.19 per 1M notifications     
+ [2m├─[0m Mobile Push notifications                                                     Monthly cost depends on usage: $0.50 per 1M notifications     
+ [2m├─[0m MacOS notifications                                                           Monthly cost depends on usage: $0.50 per 1M notifications     
+ [2m└─[0m SMS notifications (over 100)                                                  Monthly cost depends on usage: $0.75 per 100 notifications    
+                                                                                                                                                
+ [1mmodule.acm.aws_route53_record.validation[0][0m                                                                                                    
+ [2m├─[0m Standard queries (first 1B)                                                   Monthly cost depends on usage: $0.40 per 1M queries           
+ [2m├─[0m Latency based routing queries (first 1B)                                      Monthly cost depends on usage: $0.60 per 1M queries           
+ [2m└─[0m Geo DNS queries (first 1B)                                                    Monthly cost depends on usage: $0.70 per 1M queries           
+                                                                                                                                                
+ [1mmodule.acm.aws_route53_record.validation[1][0m                                                                                                    
+ [2m├─[0m Standard queries (first 1B)                                                   Monthly cost depends on usage: $0.40 per 1M queries           
+ [2m├─[0m Latency based routing queries (first 1B)                                      Monthly cost depends on usage: $0.60 per 1M queries           
+ [2m└─[0m Geo DNS queries (first 1B)                                                    Monthly cost depends on usage: $0.70 per 1M queries           
+                                                                                                                                                
+ [1mmodule.alb.aws_lb.this[0][0m                                                                                                                      
+ [2m├─[0m Application load balancer                                                                     730  hours                             $18.40 
+ [2m└─[0m Load balancer capacity units                                                  Monthly cost depends on usage: $5.84 per LCU                  
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["AWSConfigChanges"][0m                                                                     
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["CloudTrailCfgChanges"][0m                                                                 
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["ConsoleSigninFailures"][0m                                                                
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["IAMChanges"][0m                                                                           
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["NACLChanges"][0m                                                                          
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["NetworkGWChanges"][0m                                                                     
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["NoMFAConsoleSignin"][0m                                                                   
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["RootUsage"][0m                                                                            
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["RouteTableChanges"][0m                                                                    
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["S3BucketPolicyChanges"][0m                                                                
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["SecurityGroupChanges"][0m                                                                 
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.all_cis_alarms.aws_cloudwatch_metric_alarm.this["UnauthorizedAPICalls"][0m                                                                 
+ [2m└─[0m Standard resolution                                                                             1  alarm metrics                      $0.10 
+                                                                                                                                                
+ [1mmodule.ec2_bastion.aws_instance.this[0][0m                                                                                                        
+ [2m├─[0m Instance usage (Linux/UNIX, on-demand, t2.micro)                                              730  hours                              $9.20 
+ [2m└─[0m root_block_device                                                                                                                           
+ [2m   └─[0m Storage (general purpose SSD, gp2)                                                           8  GB                                 $0.88 
+                                                                                                                                                
+ [1mmodule.ec2_private_ums.aws_instance.this[0][0m                                                                                                    
+ [2m├─[0m Instance usage (Linux/UNIX, on-demand, t2.micro)                                              730  hours                              $9.20 
+ [2m└─[0m root_block_device                                                                                                                           
+ [2m   └─[0m Storage (general purpose SSD, gp2)                                                           8  GB                                 $0.88 
+                                                                                                                                                
+ [1mmodule.ec2_private_ums.aws_instance.this[1][0m                                                                                                    
+ [2m├─[0m Instance usage (Linux/UNIX, on-demand, t2.micro)                                              730  hours                              $9.20 
+ [2m└─[0m root_block_device                                                                                                                           
+ [2m   └─[0m Storage (general purpose SSD, gp2)                                                           8  GB                                 $0.88 
+                                                                                                                                                
+ [1mmodule.rds.module.db_instance.aws_db_instance.this[0][0m                                                                                          
+ [2m├─[0m Database instance (on-demand, Multi-AZ, db.t3.large)                                          730  hours                            $210.24 
+ [2m├─[0m Storage (general purpose SSD, gp2)                                                             30  GB                                 $7.59 
+ [2m└─[0m Performance Insights API                                                      Monthly cost depends on usage: $0.01 per 1000 requests        
+                                                                                                                                                
+ [1mmodule.vpc.aws_nat_gateway.this[0][0m                                                                                                             
+ [2m├─[0m NAT gateway                                                                                   730  hours                             $35.04 
+ [2m└─[0m Data processed                                                                Monthly cost depends on usage: $0.048 per GB                  
+                                                                                                                                                
+[1m OVERALL TOTAL[0m                                                                                                                          $356.99 
+──────────────────────────────────
+102 cloud resources were detected:
+∙ 28 were estimated, 13 of which include usage-based costs, see [4mhttps://infracost.io/usage-file[0m
+∙ 67 were free, rerun with --show-skipped to see details
+∙ 7 are not supported yet, rerun with --show-skipped to see details
