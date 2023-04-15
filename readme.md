@@ -1,7 +1,7 @@
 
 # Three-tier AWS VPC using IaC
 
-This project is a Terraform infrastructure as code (IaC) implementation for creating a scalable and highly available web application architecture on AWS. The architecture includes a VPC, public and private subnets, an application load balancer (ALB), and EC2 instances running a sample web application. It also includes an RDS MySQL database, and a bastion host (jumpbox) for secure access to the EC2 instances and RDS database. The infrastructure is created and managed using Terraform modules, and the architecture can be easily scaled by modifying the appropriate variables. Additionally, user data scripts are used to install the necessary software on the EC2 instances(apache, UMS, jumbox, datadog), making it easy to access and manage the infrastructure.
+This project is a Terraform infrastructure as code (IaC) implementation for creating a scalable and highly available web application architecture on AWS. This project involves the creation of a Virtual Private Cloud (VPC) with a Three-Tier Architecture (Web, App, and DB) in AWS. The architecture includes a VPC, public and private subnets, an application load balancer (ALB), and EC2 instances running a sample web application. It also includes an RDS MySQL database, and a bastion host (jumpbox) for secure access to the EC2 instances and RDS database. The infrastructure is created and managed using Terraform modules, and the architecture can be easily scaled by modifying the appropriate variables. Additionally, user data scripts are used to install the necessary software on the EC2 instances(apache, UMS, jumbox, datadog), making it easy to access and manage the infrastructure.
 
 ## Table of Contents
 - [VPC](#VPC)
