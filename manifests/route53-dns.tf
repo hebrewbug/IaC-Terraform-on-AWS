@@ -16,7 +16,7 @@ resource "aws_route53_record" "apps_dns" {
 }
   resource "aws_route53_record" "rds_dns" {
   zone_id = data.aws_route53_zone.testdomain.zone_id 
-  name    = "dns-to-db.testdomain925.com"
+  name    = "db.testdomain925.com"
   type    = "A"
   alias {
     name                   = module.alb.lb_dns_name
