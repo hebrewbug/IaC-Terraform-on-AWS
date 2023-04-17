@@ -102,7 +102,8 @@ I made this report with infracost.io solution. You can see detailed report in co
 
 ## Instalation on Local Backend
 
-Install Terraform CLI
+Install Terraform 
+
 Install AWS CLI
 
 
