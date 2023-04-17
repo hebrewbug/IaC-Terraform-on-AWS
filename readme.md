@@ -97,7 +97,7 @@ Overall, this file helps to ensure that the AWS resources are aligned with the b
 
 ## Estimate costs
  OVERALL TOTAL                                                                                                                          $356.99 
-I made this report with infracost.io solution. You cam see detailed report in costs.json file.
+I made this report with infracost.io solution. You can see detailed report in costs.json file.
 
 ## Instalation on Local Backend
 
